@@ -62,27 +62,20 @@
       background: #ffd700;
     }
 
-    .token-stats {
+    .stats-box {
       max-width: 800px;
-      margin: 50px auto 20px;
+      margin: 0 auto 30px;
       padding: 20px;
-      background: #111;
       border: 2px solid gold;
-      border-radius: 12px;
-    }
-
-    .token-stats h2 {
-      color: gold;
-      margin-bottom: 20px;
-    }
-
-    .token-stats .stat-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-      color: #fff;
+      border-radius: 10px;
+      background-color: #111;
+      text-align: left;
       font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .stats-box div {
+      margin: 5px 0;
     }
 
     .chart {
@@ -147,25 +140,23 @@
     </div>
   </header>
 
-  <!-- 📊 Token Stats -->
-  <section class="token-stats">
-    <h2>📊 Token Stats</h2>
-    <div class="stat-grid">
-      <div><strong>Price:</strong> $0.000042 🪙</div>
-      <div><strong>Market Cap:</strong> $42,000 🚀</div>
-      <div><strong>Liquidity:</strong> $13,370 💧</div>
-      <div><strong>Holders:</strong> 420+ 👑</div>
-      <div><strong>Total Supply:</strong> 100,000,000,000 🐐</div>
-    </div>
-  </section>
+  <!-- 📊 Aggressive Hype Token Stats -->
+  <div class="stats-box">
+    <div><strong>📈 Price:</strong> 0.00000213 SOL</div>
+    <div><strong>💰 Market Cap:</strong> 98,420 SOL</div>
+    <div><strong>🔒 Liquidity:</strong> 210 SOL (Locked)</div>
+    <div><strong>📦 Supply:</strong> 100,000,000,000</div>
+    <div><strong>👥 Holders:</strong> 1,042</div>
+    <div><strong>🔥 Status:</strong> Trending on Dexscreener</div>
+  </div>
 
-  <!-- 📈 Live Chart -->
+  <!-- Chart Embed -->
   <h2 style="color: #fff; font-weight: normal;">📈 Live Chart</h2>
   <div class="chart">
     <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we?embed=1&theme=dark" frameborder="0" width="100%" height="600"></iframe>
   </div>
 
-  <!-- 🚀 Buy button under chart -->
+  <!-- Buy button under chart -->
   <div class="buy-button">
     <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">
       🚀 Buy $GOATKING Now
