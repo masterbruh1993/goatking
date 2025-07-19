@@ -1,92 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GOATKING Token</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Rubik', sans-serif;
-      background: #000;
-      color: #fff;
+      background-color: #0b0b0b;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f8f8f8;
       text-align: center;
     }
     header {
-      padding: 80px 20px 40px;
+      background-color: #111;
+      padding: 20px 0;
+    }
+    header img {
+      height: 120px;
     }
     h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      margin: 0.5em 0 0.2em;
+      color: gold;
     }
     p {
-      font-size: 18px;
-      color: #aaa;
-    }
-    .goat-emoji {
-      font-size: 60px;
-      animation: bounce 2s infinite;
+      color: #ccc;
+      font-size: 1.1em;
+      margin-bottom: 2em;
     }
     .buttons {
-      margin: 30px 0;
+      margin-bottom: 3em;
     }
     .buttons a {
-      background: #fff;
-      color: #000;
-      padding: 14px 24px;
-      margin: 10px;
-      display: inline-block;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .buttons a:hover {
       background: gold;
       color: #000;
+      padding: 12px 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      display: inline-block;
+      transition: background 0.3s;
     }
-    iframe {
-      margin: 30px auto;
-      border: none;
-      width: 90%;
-      max-width: 600px;
-      height: 400px;
-      border-radius: 12px;
+    .buttons a:hover {
+      background: #ffd700;
+    }
+    .chart {
+      margin: 40px auto;
+      max-width: 900px;
+      border: 2px solid gold;
+      border-radius: 10px;
+      overflow: hidden;
     }
     footer {
-      margin: 50px 0 20px;
-      font-size: 14px;
-      color: #666;
+      margin-top: 60px;
+      padding: 20px;
+      color: #999;
+      font-size: 0.9em;
     }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+    @media screen and (max-width: 600px) {
+      .buttons a {
+        display: block;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header with logo -->
   <header>
-    <div class="goat-emoji">🐐</div>
-    <h1>GOATKING</h1>
-    <p>The ultimate Solana meme token. No roadmap. Just memes. Just gains.</p>
-
-    <div class="buttons">
-      <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">Buy on Raydium</a>
-      <a href="https://x.com/GoatKingToken" target="_blank">Twitter</a>
-      <a href="https://t.me/+9NhmadBHmfEyNDY1" target="_blank">Join Telegram</a>
-    </div>
+    <img src="https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we/logo.png" alt="GOATKING Logo">
   </header>
 
-  <section>
-    <h2>📊 Live Chart</h2>
-    <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we"></iframe>
-  </section>
+  <!-- Hero Section -->
+  <h1>GOATKING</h1>
+  <p>The ultimate Solana meme token. No roadmap. Just memes. Just gains.</p>
 
+  <!-- CTA Buttons -->
+  <div class="buttons">
+    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">Buy on Raydium</a>
+    <a href="https://x.com/GoatKingToken" target="_blank">Twitter</a>
+    <a href="https://t.me/+9NhmadBHmfEyNDY1" target="_blank">Join Telegram</a>
+  </div>
+
+  <!-- Chart Embed -->
+  <h2 style="color: #fff; font-weight: normal;">📈 Live Chart</h2>
+  <div class="chart">
+    <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we?embed=1&theme=dark" frameborder="0" width="100%" height="600"></iframe>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    Powered by GOATKING 🐐 | Built for the people. Meme your way to the moon 🚀
+    Powered by <strong style="color:gold;">GOATKING 🐐</strong> | Built for the people. Meme your way to the moon 🚀
   </footer>
 
 </body>
