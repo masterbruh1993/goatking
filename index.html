@@ -13,7 +13,6 @@
       text-align: center;
     }
 
-    /* Floating logo on top-left */
     .floating-logo {
       position: fixed;
       top: 15px;
@@ -62,22 +61,6 @@
       background: #ffd700;
     }
 
-    .stats-box {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      padding: 20px;
-      border: 2px solid gold;
-      border-radius: 10px;
-      background-color: #111;
-      text-align: left;
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-
-    .stats-box div {
-      margin: 5px 0;
-    }
-
     .chart {
       margin: 40px auto;
       max-width: 900px;
@@ -101,6 +84,72 @@
       display: inline-block;
     }
 
+    .token-stats {
+      background: #111;
+      border: 2px solid gold;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .token-stats h2 {
+      color: gold;
+      margin-bottom: 20px;
+    }
+
+    .token-stats ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .token-stats li {
+      padding: 8px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .token-stats li span {
+      color: gold;
+      float: right;
+    }
+
+    .fake-chat-section {
+      margin: 60px auto;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    .fake-chat-section h2 {
+      color: gold;
+      margin-bottom: 20px;
+    }
+
+    .chat-box {
+      background: #1a1a1a;
+      border: 2px solid gold;
+      border-radius: 10px;
+      padding: 15px;
+      height: 220px;
+      overflow-y: scroll;
+      font-size: 0.95em;
+      text-align: left;
+    }
+
+    .chat-message {
+      margin-bottom: 12px;
+      padding: 8px;
+      background-color: #111;
+      border-radius: 6px;
+      color: #f2f2f2;
+    }
+
+    .chat-message .user {
+      color: gold;
+      font-weight: bold;
+      margin-right: 6px;
+    }
+
     footer {
       margin-top: 60px;
       padding: 20px;
@@ -117,12 +166,16 @@
       .floating-logo img {
         height: 45px;
       }
+
+      .token-stats ul {
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating logo on top-left -->
+  <!-- Floating logo -->
   <div class="floating-logo">
     <img src="https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we/logo.png" alt="GOATKING Logo">
   </div>
@@ -131,8 +184,6 @@
   <header>
     <h1>GOATKING</h1>
     <p>The ultimate Solana meme token. No roadmap. Just memes. Just gains.</p>
-
-    <!-- CTA Buttons -->
     <div class="buttons">
       <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">Buy on Raydium</a>
       <a href="https://x.com/GoatKingToken" target="_blank">Twitter</a>
@@ -140,17 +191,19 @@
     </div>
   </header>
 
-  <!-- 📊 Aggressive Hype Token Stats -->
-  <div class="stats-box">
-    <div><strong>📈 Price:</strong> 0.00000213 SOL</div>
-    <div><strong>💰 Market Cap:</strong> 98,420 SOL</div>
-    <div><strong>🔒 Liquidity:</strong> 210 SOL (Locked)</div>
-    <div><strong>📦 Supply:</strong> 100,000,000,000</div>
-    <div><strong>👥 Holders:</strong> 1,042</div>
-    <div><strong>🔥 Status:</strong> Trending on Dexscreener</div>
+  <!-- 📊 Token Stats -->
+  <div class="token-stats">
+    <h2>📊 GOATKING Token Stats</h2>
+    <ul>
+      <li>Price: <span>$0.00001234</span></li>
+      <li>Market Cap: <span>$1,234,000</span></li>
+      <li>Liquidity: <span>$80,000</span></li>
+      <li>Total Supply: <span>100,000,000,000</span></li>
+      <li>Holders: <span>4,213</span></li>
+    </ul>
   </div>
 
-  <!-- Chart Embed -->
+  <!-- Chart -->
   <h2 style="color: #fff; font-weight: normal;">📈 Live Chart</h2>
   <div class="chart">
     <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we?embed=1&theme=dark" frameborder="0" width="100%" height="600"></iframe>
@@ -161,6 +214,21 @@
     <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">
       🚀 Buy $GOATKING Now
     </a>
+  </div>
+
+  <!-- 💬 Fake Chat UI -->
+  <div class="fake-chat-section">
+    <h2>💬 Community Chat</h2>
+    <div class="chat-box">
+      <div class="chat-message"><span class="user">🐐 GoatFan69:</span> Just bought 1M $GOATKING 🔥</div>
+      <div class="chat-message"><span class="user">💰 SnipeWhale:</span> Bro this gonna moon today 🚀</div>
+      <div class="chat-message"><span class="user">👑 DevKing:</span> 913 SOL goal loading... 🧠</div>
+      <div class="chat-message"><span class="user">🦍 BigApe:</span> Holding strong 💪 #GOAT</div>
+      <div class="chat-message"><span class="user">🌪️ MemeLord:</span> This is the next GROK for real 🐐</div>
+      <div class="chat-message"><span class="user">🔥 FomoSol:</span> Buy now or cry later 🤡</div>
+      <div class="chat-message"><span class="user">💎 DiamondHands:</span> LP is locked. I’m in 🫡</div>
+      <div class="chat-message"><span class="user">📈 ChartWizard:</span> Dexscreener showing volume spike 👀</div>
+    </div>
   </div>
 
   <!-- Footer -->
