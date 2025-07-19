@@ -12,26 +12,40 @@
       color: #f8f8f8;
       text-align: center;
     }
+
+    /* Floating logo on top-left */
+    .floating-logo {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 9999;
+    }
+
+    .floating-logo img {
+      height: 60px;
+      border-radius: 50%;
+    }
+
     header {
-      background-color: #111;
-      padding: 20px 0;
+      padding: 100px 0 20px;
     }
-    header img {
-      height: 120px;
-    }
+
     h1 {
       font-size: 2.5em;
       margin: 0.5em 0 0.2em;
       color: gold;
     }
+
     p {
       color: #ccc;
       font-size: 1.1em;
       margin-bottom: 2em;
     }
+
     .buttons {
       margin-bottom: 3em;
     }
+
     .buttons a {
       background: gold;
       color: #000;
@@ -43,9 +57,11 @@
       display: inline-block;
       transition: background 0.3s;
     }
+
     .buttons a:hover {
       background: #ffd700;
     }
+
     .chart {
       margin: 40px auto;
       max-width: 900px;
@@ -53,43 +69,72 @@
       border-radius: 10px;
       overflow: hidden;
     }
+
+    .buy-button {
+      margin-top: 20px;
+    }
+
+    .buy-button a {
+      background-color: #ffd700;
+      color: #000;
+      padding: 14px 28px;
+      font-weight: bold;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
     footer {
       margin-top: 60px;
       padding: 20px;
       color: #999;
       font-size: 0.9em;
     }
+
     @media screen and (max-width: 600px) {
       .buttons a {
         display: block;
         margin: 10px auto;
+      }
+
+      .floating-logo img {
+        height: 45px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with logo -->
-  <header>
-  <img src="https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we/logo.png" alt="GOATKING Logo" style="height: 120px;">
-</header>
-
+  <!-- Floating logo on top-left -->
+  <div class="floating-logo">
+    <img src="https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we/logo.png" alt="GOATKING Logo">
+  </div>
 
   <!-- Hero Section -->
-  <h1>GOATKING</h1>
-  <p>The ultimate Solana meme token. No roadmap. Just memes. Just gains.</p>
+  <header>
+    <h1>GOATKING</h1>
+    <p>The ultimate Solana meme token. No roadmap. Just memes. Just gains.</p>
 
-  <!-- CTA Buttons -->
-  <div class="buttons">
-    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">Buy on Raydium</a>
-    <a href="https://x.com/GoatKingToken" target="_blank">Twitter</a>
-    <a href="https://t.me/+9NhmadBHmfEyNDY1" target="_blank">Join Telegram</a>
-  </div>
+    <!-- CTA Buttons -->
+    <div class="buttons">
+      <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">Buy on Raydium</a>
+      <a href="https://x.com/GoatKingToken" target="_blank">Twitter</a>
+      <a href="https://t.me/+9NhmadBHmfEyNDY1" target="_blank">Join Telegram</a>
+    </div>
+  </header>
 
   <!-- Chart Embed -->
   <h2 style="color: #fff; font-weight: normal;">📈 Live Chart</h2>
   <div class="chart">
     <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we?embed=1&theme=dark" frameborder="0" width="100%" height="600"></iframe>
+  </div>
+
+  <!-- Buy button under chart -->
+  <div class="buy-button">
+    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">
+      🚀 Buy $GOATKING Now
+    </a>
   </div>
 
   <!-- Footer -->
