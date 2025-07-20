@@ -302,6 +302,76 @@
   for (let i = 0; i < 4; i++) shuffleMessages();
 </script>
 
+<!-- 🔥 FOMO Popup Starts -->
+<div id="fomo-popup" style="display:none;">
+  <p id="fomo-message">Someone just bought 1M $GOATKING!</p>
+  <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" target="_blank">🛒 Buy Now</a>
+</div>
+
+<script>
+  const fomoMessages = [
+    "🐋 Whale just bought 5M $GOATKING!",
+    "🚀 10 wallets sniped $GOATKING in last 5 mins!",
+    "🔥 FOMO is real! Buy before 100x!",
+    "👑 Dev wallet only 20M left!",
+    "📈 Volume spike spotted! Dexscreener green!",
+    "🫨 Missed GROK? Don’t miss GOATKING!",
+    "✅ LP locked. SAFU confirmed.",
+  ];
+
+  function showFomoPopup() {
+    const popup = document.getElementById("fomo-popup");
+    const message = document.getElementById("fomo-message");
+    const index = Math.floor(Math.random() * fomoMessages.length);
+    message.textContent = fomoMessages[index];
+
+    popup.style.display = "block";
+    popup.style.opacity = "1";
+
+    setTimeout(() => {
+      popup.style.opacity = "0";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 1000);
+    }, 6000);
+  }
+
+  setInterval(showFomoPopup, 12000);
+</script>
+<style>
+  #fomo-popup {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #111;
+    border: 2px solid gold;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1em;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  #fomo-popup a {
+    display: inline-block;
+    margin-top: 10px;
+    background: gold;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  #fomo-popup a:hover {
+    background: #ffd700;
+  }
+</style>
+<!-- 🔥 FOMO Popup Ends -->
+
+
 
 </body>
 </html>
