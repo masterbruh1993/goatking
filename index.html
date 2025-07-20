@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GOATKING - Meme Token on Solana</title>
-  <meta name="description" content="The ultimate Solana meme token. Join the GOAT revolution. Buy, shill, and become a king." />
-  <meta property="og:title" content="GOATKING - Meme Token on Solana" />
-  <meta property="og:description" content="The ultimate Solana meme token. Join the GOAT revolution. Buy, shill, and become a king." />
-  <meta property="og:image" content="https://goatkingtoken.com/assets/goatking-preview.png" />
-  <meta property="og:url" content="https://goatkingtoken.com" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="GOATKING is the ultimate meme token on Solana. Join the herd. Become a king.">
+  <meta property="og:title" content="GOATKING - Meme Token on Solana">
+  <meta property="og:description" content="GOATKING is the ultimate meme token on Solana. Join the herd. Become a king.">
+  <meta property="og:image" content="https://goatkingtoken.com/assets/goatking-preview.png">
+  <meta property="og:url" content="https://goatkingtoken.com">
+  <meta name="twitter:card" content="summary_large_image">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
       color: #fff;
-      background: url('https://i.ibb.co/Tg3NkF3/goatking-hustle-bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      overflow-x: hidden;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
+      text-align: center;
       padding: 2rem;
     }
 
     h1 {
       font-size: 3rem;
-      text-align: center;
       margin-bottom: 1rem;
     }
 
     .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
       margin-bottom: 2rem;
-      flex-wrap: wrap;
     }
 
     .btn {
+      display: inline-block;
       background-color: #facc15;
       color: #000;
       padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
       border-radius: 999px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
     }
 
     .section {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: #1a1a1a;
       margin: 2rem auto;
       padding: 1rem;
       border-radius: 1rem;
@@ -64,108 +55,32 @@
       border-radius: 1rem;
     }
 
-    .chat-box {
-      max-height: 250px;
-      overflow: hidden;
-      font-size: 0.95rem;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 1rem;
-      padding: 1rem;
-      margin-top: 1rem;
-    }
-
-    .chat-message {
-      margin-bottom: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 999px;
-    }
-
     footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-weight: bold;
-      background-color: #111;
-      padding: 2rem;
-      border-top: 2px solid #facc15;
+      margin-top: 3rem;
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>🐐 GOATKING</h1>
-    <div class="buttons">
-      <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" class="btn">Buy on Raydium</a>
-      <a href="https://x.com/GoatKingToken" class="btn">Twitter</a>
-      <a href="https://t.me/+9NhmadBHmfEyNDY1" class="btn">Telegram</a>
-    </div>
-
-    <div class="section">
-      <h2>📊 Token Stats</h2>
-      <p>Total Supply: 100M<br>Liquidity Locked: 3 Months<br>Tax: 0/0<br>Dev Wallet: Transparent</p>
-    </div>
-
-    <div class="section">
-      <h2>📈 Dexscreener Chart</h2>
-      <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we?embed=1"></iframe>
-    </div>
-
-    <div class="section">
-      <h2>💬 Community Hype</h2>
-      <div class="chat-box" id="chatBox"></div>
-    </div>
-
-    <footer>
-      🚀 Like GOATKING? SHILL IT NOW! Send this site to your friends & post on X + Telegram!
-    </footer>
+  <h1>🐐 GOATKING</h1>
+  <div class="buttons">
+    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we" class="btn">Buy on Raydium</a>
+    <a href="https://x.com/GoatKingToken" class="btn">Twitter</a>
+    <a href="https://t.me/+9NhmadBHmfEyNDY1" class="btn">Telegram</a>
   </div>
 
-  <script>
-    const messages = [
-      "Just aped in 🔥 Let's ride this to the moon!",
-      "GOATKING is the next $PEPE, mark my words.",
-      "I saw the chart and couldn't resist buying.",
-      "Big buys coming in, don't get left behind.",
-      "Telegram is getting wild rn.",
-      "First meme token I actually believe in.",
-      "Looks like dev is active and smart.",
-      "Volume looks organic. This might run hard.",
-      "Imagine missing this at sub 10k MC.",
-      "Chart looks like early GROK. IYKYK."
-    ];
+  <div class="section">
+    <h2>📊 Token Stats</h2>
+    <p>Total Supply: 100M<br>Liquidity Locked: 3 Months<br>Tax: 0/0<br>Dev Wallet: Transparent</p>
+  </div>
 
-    const chatBox = document.getElementById('chatBox');
+  <div class="section">
+    <h2>📈 Live Chart</h2>
+    <iframe src="https://dexscreener.com/solana/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we?embed=1"></iframe>
+  </div>
 
-    function shuffle(arr) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
-    function loadMessages() {
-      chatBox.innerHTML = '';
-      const shuffled = shuffle([...messages]);
-      shuffled.forEach(msg => {
-        const div = document.createElement('div');
-        div.className = 'chat-message';
-        div.textContent = msg;
-        chatBox.appendChild(div);
-      });
-    }
-
-    function autoScroll() {
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function loopChat() {
-      loadMessages();
-      autoScroll();
-    }
-
-    loadMessages();
-    setInterval(loopChat, 8000);
-  </script>
+  <footer>
+    © 2025 GOATKING. All rights reserved.
+  </footer>
 </body>
 </html>
