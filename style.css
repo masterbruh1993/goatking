@@ -77,19 +77,6 @@ header p {
   padding: 0;
 }
 /* === BACKGROUND WRAPPER === */
-body {
-  background-color: #1a1a1a;
-  color: #fff;
-}
-  background-image: url('https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9coeACQCqkK541WwL9we/logo.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 400px; /* adjust size */
-  background-attachment: fixed;
-  opacity: 0.25;
-}
-
-/* === FIRE OVERLAY (optional effect) === */
 body::before {
   content: "";
   position: fixed;
@@ -100,10 +87,13 @@ body::before {
   background-image: url('https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9coeACQqck541WwL9we/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 400px;
+  background-size: 300px;
   background-attachment: fixed;
-  opacity: 0.07;
+  opacity: 0.03;
   z-index: -1;
+}
+}
+
 }
 
 .token-stats li {
