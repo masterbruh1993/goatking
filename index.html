@@ -245,7 +245,7 @@
  </div> <!-- this closes the fake-chat-section -->
 
 <!-- ⬇️ Paste CTA block here ⬇️ -->
-<div class="footer-cta" style="margin-top: 40px; background: #111; border-top: 2px solid gold; padding: 20px 15px;">
+<div class="footer-cta" style="margin-top: 20px; background: #111; border-top: 2px solid gold; padding: 20px 15px;">
   <h2 style="color: gold; font-size: 1.8em; margin-bottom: 10px;">💥 Shill $GOATKING Now!</h2>
   <p style="color: #ccc; font-size: 1.1em;">The herd is growing. Tweet it. Post it. Share the GOAT.</p>
   <div class="buttons" style="margin-top: 20px;">
@@ -258,6 +258,45 @@
 <footer>
   Powered by <strong style="color:gold;">GOATKING 🐐</strong> | Built for the people. Meme your way to the moon 🚀
 </footer>
+  
+<script>
+  const chatMessages = [
+    { user: "🐐 GoatFan69", text: "Just bought 1M $GOATKING 🔥" },
+    { user: "💰 SnipeWhale", text: "Bro this might moon today" },
+    { user: "👑 DevKing", text: "913 SOL target approaching fast." },
+    { user: "🦍 BigApe", text: "Holding. Not selling until 100x." },
+    { user: "🌪️ MemeLord", text: "GOATKING could be the next GROK." },
+    { user: "📈 ChartWizard", text: "Dexscreener showing huge spike." },
+    { user: "👻 AnonAlpha", text: "Only 20M tokens left on dev wallet." },
+    { user: "💼 EntrySniper", text: "Got in before the next pump" },
+    { user: "🚀 FastDegen", text: "Raydium liquidity locked = bullish" },
+    { user: "🧠 WhaleIntel", text: "Just saw 7 new wallets rotate buys." }
+  ];
+
+  const chatBox = document.getElementById("chatBox");
+
+  function shuffleMessages() {
+    const randomIndex = Math.floor(Math.random() * chatMessages.length);
+    const message = chatMessages[randomIndex];
+
+    const div = document.createElement("div");
+    div.className = "chat-message";
+    div.innerHTML = `<span class="user">${message.user}:</span> ${message.text}`;
+    chatBox.appendChild(div);
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    if (chatBox.children.length > 8) {
+      chatBox.removeChild(chatBox.children[0]);
+    }
+  }
+
+  setInterval(shuffleMessages, 3500);
+  for (let i = 0; i < 4; i++) shuffleMessages();
+</script>
+
+</body>
+</html>
 
 
 </body>
