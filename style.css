@@ -12,8 +12,19 @@ body {
   width: 120px;
   display: block;
   margin: 0 auto 20px auto;
+  filter: drop-shadow(0 0 10px gold);
+  animation: pulse-glow 2s infinite alternate;
 }
+
+@keyframes pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 6px gold);
+  }
+  100% {
+    filter: drop-shadow(0 0 16px gold);
+  }
 }
+
 
 
 .flash-banner {
