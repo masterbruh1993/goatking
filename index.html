@@ -282,10 +282,21 @@
       popup.style.display = "none";
     }, 5500);
   }
+function isPopupVisible() {
+  const buyPopup = document.getElementById("buyAlertPopup");
+  const devPopup = document.getElementById("devWalletPopup");
+  return (
+    (buyPopup && buyPopup.style.display === "block") ||
+    (devPopup && devPopup.style.display === "block")
+  );
+}
 
-  setInterval(() => {
-    if (Math.random() > 0.3) showBuyAlert();
-  }, Math.floor(Math.random() * 10000) + 15000);
+setInterval(() => {
+  if (!isPopupVisible() && Math.random() < 0.3) {
+    showBuyAlert();
+  }
+}, Math.floor(Math.random() * 10000) + 15000);
+
 </script>
 
 <!-- ⬆️ Ends here ⬆️ -->
