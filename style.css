@@ -8,13 +8,17 @@ body {
   padding: 0 10px;
 }
 
-.floating-logo img {
-  width: 80px;
+.floating-logo {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 999;
 }
+
+.floating-logo img {
+  width: 80px;
+}
+
 
 .flash-banner {
   background-color: goldenrod;
