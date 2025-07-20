@@ -81,8 +81,15 @@ header p {
 .buy-button a {
   font-size: 1.2rem;
   margin: 20px 0;
-  background-color: #00ff94;
-  color: #000;
+  background-color: gold !important;
+  color: black !important;
+  padding: 14px 28px;
+  font-weight: bold;
+  border-radius: 12px;
+  display: inline-block;
+  text-decoration: none;
+}
+
 }
 
 .countdown-box {
