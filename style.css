@@ -87,7 +87,7 @@ body::before {
   background-image: url('https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9coeACQqck541WwL9we/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 500px; /* was 300px */
+  background-size: 900px; /* was 300px */
   background-attachment: fixed;
   opacity: 0.09; /* was 0.03 */
   z-index: -1;
