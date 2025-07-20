@@ -227,6 +227,15 @@
       🚀 Buy $GOATKING Now
     </a>
   </div>
+</div>
+
+<!-- 🔥 Dev Wallet Countdown -->
+<div id="countdownContainer" style="background-color: #111; color: gold; border: 2px solid gold; padding: 12px 18px; font-weight: bold; font-size: 1.1em; margin: 20px auto; text-align: center; border-radius: 10px; max-width: 300px; box-shadow: 0 0 10px gold;">
+  ⏳ Dev wallet unlocks in <span id="countdownTimer">Loading...</span>
+</div>
+
+<div class="fake-chat-section">
+  <h2>💬 Community Chat</h2>
 
   <div class="fake-chat-section">
   <h2>💬 Community Chat</h2>
@@ -414,7 +423,31 @@ setInterval(() => {
   #fomo-popup a:hover {
     background: #ffd700;
   }
-</style>
+<!-- 🔓 Dev Wallet Countdown Script -->
+<script>
+  const unlockTime = new Date("2025-07-22T12:00:00Z").getTime();
+  const timer = document.getElementById("countdownTimer");
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = unlockTime - now;
+
+    if (distance <= 0) {
+      timer.innerHTML = "Unlocked!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
+
 <!-- 🔥 FOMO Popup Ends -->
 
 
