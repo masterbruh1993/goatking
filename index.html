@@ -188,9 +188,44 @@
         font-size: 0.9em;
       }
     }
-  </style>
+  .flash-banner {
+  background-color: gold;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px;
+  font-size: 1.1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 0 10px gold;
+}
+    /* 🤖 Anti-Bot Popup */
+.bot-stats-popup {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: #111;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  padding: 12px 18px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #00ffcc;
+  z-index: 9999;
+  display: none;
+}
+
+
 </head>
 <body>
+<!-- 💥 Flash Notification Banner -->
+<div id="flashBanner" class="flash-banner">
+  🚨 Whale just bought 20M $GOATKING
+</div>
 
   <div class="floating-logo">
     <img src="https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9oceACQqck541WwL9we/logo.png" alt="GOATKING Logo">
@@ -237,9 +272,6 @@
 <div id="botStatsPopup" class="bot-stats-popup">
   🤖 Blocking sniper bots...
 </div>
-
-<div class="fake-chat-section">
-  <h2>💬 Community Chat</h2>
 
   <div class="fake-chat-section">
   <h2>💬 Community Chat</h2>
@@ -313,6 +345,35 @@ setInterval(() => {
 </script>
 
 <!-- ⬆️ Ends here ⬆️ -->
+
+<script>
+// 🤖 Anti-Bot Stats Logic
+const botMessages = [
+  "🛡️ 4 sniper bots blocked",
+  "⚠️ Suspicious wallet flagged",
+  "🔍 Monitoring MEV activity",
+  "🚫 2 MEV bots rejected",
+  "🤖 AI Guard active: No threats found",
+  "🛑 Whale bot detected, defense up",
+  "👁 5 stealth wallets scanned",
+  "💡 Anti-bot scanner optimized"
+];
+
+function showBotStats() {
+  const popup = document.getElementById("botStatsPopup");
+  const message = botMessages[Math.floor(Math.random() * botMessages.length)];
+  popup.innerText = message;
+  popup.style.display = "block";
+
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 6000);
+}
+
+setInterval(() => {
+  if (!isPopupVisible()) showBotStats();
+}, Math.floor(Math.random() * 10000) + 15000);
+</script>
 
 <footer>
   Powered by <strong style="color:gold;">GOATKING 🐐</strong> | Built for the people. Meme your way to the moon 🚀
