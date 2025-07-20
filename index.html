@@ -276,6 +276,8 @@
   const chatBox = document.getElementById("chatBox");
 
   function shuffleMessages() {
+    if (!chatBox) return;
+
     const randomIndex = Math.floor(Math.random() * chatMessages.length);
     const message = chatMessages[randomIndex];
 
@@ -284,16 +286,22 @@
     div.innerHTML = `<span class="user">${message.user}:</span> ${message.text}`;
     chatBox.appendChild(div);
 
+    // Scroll down smoothly
     chatBox.scrollTop = chatBox.scrollHeight;
 
+    // Limit to last 8 messages
     if (chatBox.children.length > 8) {
       chatBox.removeChild(chatBox.children[0]);
     }
   }
 
+  // Start rotation
   setInterval(shuffleMessages, 3500);
+
+  // Load 4 initial messages
   for (let i = 0; i < 4; i++) shuffleMessages();
 </script>
+
 
 </body>
 </html>
