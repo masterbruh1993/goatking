@@ -78,30 +78,32 @@ header p {
 }
 /* === BACKGROUND WRAPPER === */
 body {
-  background-color: #0a0011; /* fallback dark */
+  background-color: #1a1a1a;
+  color: #fff;
+}
   background-image: url('https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9coeACQCqkK541WwL9we/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 400px; /* adjust size */
   background-attachment: fixed;
-  opacity: 0.07; /* light opacity */
+  opacity: 1;
 }
 
 /* === FIRE OVERLAY (optional effect) === */
-body::after {
+body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
-  background: url('https://media.giphy.com/media/Oo2kL0BKa0TJu/giphy.gif');
+  background-image: url('https://raw.githubusercontent.com/masterbruh1993/goatking-token-metadata/main/assets/mainnet/5ggRuPe6KveGok8AAzt3gN99C9coeACQqck541WwL9we/logo.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  opacity: 0.06; /* very light fire effect */
-  z-index: 0;
+  background-size: 400px;
+  background-attachment: fixed;
+  opacity: 0.07;
+  z-index: -1;
 }
 
 .token-stats li {
